@@ -3,7 +3,7 @@ var app = app || {};
 
 app.arrayUtils = (function (arrayUtils){
     var counter = 0;
-    arrayUtils.counterF = function(counter){      
+    arrayUtils.counterAdd = function(){      
             return ++counter;      
         };
         arrayUtils.Get = function(){
@@ -12,5 +12,14 @@ app.arrayUtils = (function (arrayUtils){
         return  arrayUtils;
     }(app.arrayUtils || {}));
 
-    console.log(app.arrayUtils.Get());
-    console.log(app.arrayUtils.counterF(app.arrayUtils.Get()));
+
+app.arrayUtils = (function (arrayUtils){
+    arrayUtils.counterGetNewCounter = function(x){      
+            var counter=0;
+            counter += x;
+            return counter;    
+        };
+        return  arrayUtils;
+    }(app.arrayUtils || {}));
+
+   
